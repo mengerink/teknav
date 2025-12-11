@@ -1,0 +1,103 @@
+.navbar {
+    background-color: var(--color-white);
+    height: var(--header-height);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.navbar-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-text {
+    /* Hide text if logo has text, or keep it depending on design. Logo seems to be symbol only */
+    display: block;
+}
+
+.navbar-links {
+    display: flex;
+    gap: var(--spacing-8);
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--color-text-main);
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link.active {
+    color: var(--color-primary);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    color: var(--color-text-main);
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: var(--spacing-4);
+        gap: var(--spacing-4);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        display: block;
+        padding: 0.5rem;
+    }
+}

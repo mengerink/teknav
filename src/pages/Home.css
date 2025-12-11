@@ -1,0 +1,91 @@
+.hero {
+    background: linear-gradient(135deg, #0a2540 0%, #003366 100%);
+    color: var(--color-white);
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-4);
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-8);
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-4);
+    justify-content: center;
+}
+
+.hero-buttons .btn-outline {
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+.hero-buttons .btn-outline:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-8);
+}
+
+.feature-card {
+    background: var(--color-white);
+    padding: var(--spacing-8);
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform 0.2s;
+    border: 1px solid var(--color-border);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-4);
+}
+
+.feature-card h3 {
+    margin-bottom: var(--spacing-4);
+    color: var(--color-primary);
+}
+
+.feature-card p {
+    color: var(--color-text-light);
+}
+
+.bg-light {
+    background-color: var(--color-bg-light);
+}
+
+.applications-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-4);
+}
+
+.app-item {
+    background: var(--color-white);
+    padding: var(--spacing-4) var(--spacing-8);
+    border-radius: 50px;
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+    border: 1px solid var(--color-border);
+}
