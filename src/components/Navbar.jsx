@@ -22,7 +22,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="container navbar-container">
                 <NavLink to="/" className="navbar-logo">
-                    <img src="/logo.png" alt="Teknav Logo" />
+                    <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Teknav Logo" />
                     <span className="logo-text">Teknav</span>
                 </NavLink>
 
